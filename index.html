@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Для тебя ❤️</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Comforter&family=Nunito:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="hearts-container" id="heartsContainer"></div>
+    <div class="stars" id="stars"></div>
+
+    <!-- Секция 1: Приветствие -->
+    <section class="section intro-section active" id="section1">
+        <div class="content">
+            <div class="heart-beat">❤️</div>
+            <h1 class="fade-in">Привет, любимая...</h1>
+            <p class="subtitle fade-in-delay">Я хочу сказать тебе кое-что важное</p>
+            <button class="next-btn" onclick="goToSection(2)">Узнать что? →</button>
+        </div>
+    </section>
+
+    <!-- Секция 2: Счётчик времени -->
+    <section class="section" id="section2">
+        <div class="content">
+            <h2 class="fade-in">Мы вместе уже...</h2>
+            <div class="counter-container fade-in-delay">
+                <div class="counter-item">
+                    <span class="counter-number" id="days">0</span>
+                    <span class="counter-label">дней</span>
+                </div>
+                <div class="counter-item">
+                    <span class="counter-number" id="hours">0</span>
+                    <span class="counter-label">часов</span>
+                </div>
+                <div class="counter-item">
+                    <span class="counter-number" id="minutes">0</span>
+                    <span class="counter-label">минут</span>
+                </div>
+                <div class="counter-item">
+                    <span class="counter-number" id="seconds">0</span>
+                    <span class="counter-label">секунд</span>
+                </div>
+            </div>
+            <p class="subtitle fade-in-delay-more">Каждая секунда рядом с тобой — это подарок</p>
+            <button class="next-btn" onclick="goToSection(3)">Продолжить →</button>
+        </div>
+    </section>
+
+    <!-- Секция 3: Причины -->
+    <section class="section" id="section3">
+        <div class="content">
+            <h2 class="fade-in">За что я тебя люблю...</h2>
+            <div class="reasons-grid">
+                <div class="reason-card" style="--i:1">
+                    <div class="card-icon">😊</div>
+                    <p>Твоя улыбка, которая освещает мой день</p>
+                </div>
+                <div class="reason-card" style="--i:2">
+                    <div class="card-icon">🤗</div>
+                    <p>Твои объятия — моё самое безопасное место</p>
+                </div>
+                <div class="reason-card" style="--i:3">
+                    <div class="card-icon">💪</div>
+                    <p>Ты всегда поддерживаешь меня</p>
+                </div>
+                <div class="reason-card" style="--i:4">
+                    <div class="card-icon">😂</div>
+                    <p>С тобой я могу быть самим собой</p>
+                </div>
+                <div class="reason-card" style="--i:5">
+                    <div class="card-icon">✨</div>
+                    <p>Ты делаешь этот мир ярче</p>
+                </div>
+                <div class="reason-card" style="--i:6">
+                    <div class="card-icon">💝</div>
+                    <p>Ты — лучшее что случилось со мной</p>
+                </div>
+            </div>
+            <button class="next-btn" onclick="goToSection(4)">Дальше →</button>
+        </div>
+    </section>
+
+    <!-- Секция 4: Признание -->
+    <section class="section" id="section4">
+        <div class="content">
+            <div class="big-heart">💕</div>
+            <h1 class="love-letter-title">Я люблю тебя!</h1>
+            <div class="love-letter">
+                <p>С тобой мы прошли уже так много, и каждый день</p>
+                <p>я убеждаюсь, что ты — самый важный человек в моей жизни.</p>
+                <br>
+                <p>Более полутора лет вместе, и я хочу,</p>
+                <p>чтобы знала: я буду рядом всегда.</p>
+                <br>
+                <p>Спасибо, что ты есть. Спасибо, что ты — моя.</p>
+                <br>
+                <p class="signature">Навсегда твой, Максим ❤️</p>
+            </div>
+            <div class="final-hearts">
+                <span>💖</span><span>💗</span><span>💖</span><span>💗</span><span>💖</span>
+            </div>
+            <button class="next-btn" onclick="goToSection(5)">Ещё кое-что... →</button>
+        </div>
+    </section>
+
+    <!-- Секция 5: Интерактив -->
+    <section class="section" id="section5">
+        <div class="content">
+            <h2 class="fade-in">Нажми сюда!</h2>
+            <p class="subtitle fade-in-delay">Каждое сердечко — это моё «люблю тебя»</p>
+            <div class="click-area" id="clickArea">
+                <div class="tap-text">Нажми на экран 💕</div>
+            </div>
+            <p class="heart-count">Сердечек создано: <span id="heartCount">0</span></p>
+            <div class="final-message">
+                <p>И это только начало нашей истории... 🌹</p>
+            </div>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
