@@ -116,31 +116,7 @@ document.addEventListener('DOMContentLoaded', () => {
     createStars();
     setupClickArea();
     setInterval(createFallingHeart, 1500);
-    // Первые сердечки сразу
     for (let i = 0; i < 5; i++) {
         setTimeout(createFallingHeart, i * 300);
     }
-    // Загружаем котят
-    loadKittens();
 });
-
-// Загрузка фото котят
-function loadKittens() {
-    const kittenImgs = document.querySelectorAll('.kitten-img');
-    const catApiUrl = 'https://api.thecatapi.com/v1/images/search';
-
-    kittenImgs.forEach((img, index) => {
-        fetch(catApiUrl)
-            .then(res => res.json())
-            .then(data => {
-                if (data && data[0] && data[0].url) {
-                    img.src = data[0].url;
-                    img.alt = 'милый котёнок';
-                }
-            })
-            .catch(() => {
-                // Если API недоступен — оставляем как есть
-                img.style.display = 'none';
-            });
-    });
-}
