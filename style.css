@@ -450,10 +450,11 @@ h2 {
 
 .section-scroll .content {
     min-height: 100%;
+    margin: 0 auto;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: flex-start;
+    justify-content: center;
     padding: 40px 20px 60px;
 }
 
